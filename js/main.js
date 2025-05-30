@@ -110,6 +110,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	setClock('.timer', deadline)
 
+
 	// MODAL
 	const modal = document.querySelector('.modal'),
 		modalOpenBtns = document.querySelectorAll('[data-modal]'),
@@ -151,17 +152,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	// Slider
 	const slides = document.querySelectorAll('.gallery__slider-item'),
-				prevSlideBtn = document.querySelector('.gallery__slider-prev'),
-				nextSlideBtn = document.querySelector('.gallery__slider-next'),
-				currentSlide = document.querySelector('#current'),
-				totalSlide = document.querySelector('#total'),
-				slider = document.querySelector('.gallery__slider-inner'),
-				sliderList = document.querySelector('.gallery__slider-list'),
-				width = window.getComputedStyle(sliderList).width
+		prevSlideBtn = document.querySelector('.gallery__slider-prev'),
+		nextSlideBtn = document.querySelector('.gallery__slider-next'),
+		currentSlide = document.querySelector('#current'),
+		totalSlide = document.querySelector('#total'),
+		slider = document.querySelector('.gallery__slider-inner'),
+		sliderList = document.querySelector('.gallery__slider-list'),
+		width = window.getComputedStyle(sliderList).width
 
 	let slideIndex = 1
-	let	offset = 0
-	let	autoSlideInterval
+	let offset = 0
+	let autoSlideInterval
 
 	if (slides.length < 10) {
 		totalSlide.textContent = `0${slides.length}`
